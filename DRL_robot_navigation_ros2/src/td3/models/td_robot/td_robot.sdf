@@ -1,0 +1,736 @@
+<sdf version='1.7'>
+  <model name='td_robot'>
+    <link name='base_link'>
+      <inertial>
+        <pose>-0.021738 0 0.059907 0 -0 0</pose>
+        <mass>13.3401</mass>
+        <inertia>
+          <ixx>1.20926</ixx>
+          <ixy>0</ixy>
+          <ixz>0.00863852</ixz>
+          <iyy>1.32216</iyy>
+          <iyz>0</iyz>
+          <izz>1.23947</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_fixed_joint_lump__chassis_collision'>
+        <pose>-0.045 0 0.148 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/chassis.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cameraD_collision_1'>
+        <pose>0.025 0 0.32 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__front_camera_collision_2'>
+        <pose>0.025 0 0.32 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__front_laser_collision_3'>
+        <pose>0.125 0 0.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.1</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__sonar_collision_4'>
+        <pose>0.109 0 0.209 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.01</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__top_collision_5'>
+        <pose>-0.045 0 0.234 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/top.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__velodyne_base_link_collision_6'>
+        <pose>0.125 0 0.28585 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0717</length>
+            <radius>0.0516</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='base_link_fixed_joint_lump__chassis_visual_visual'>
+        <pose>-0.045 0 0.148 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/chassis.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__battery0_visual_visual_1'>
+        <pose>-0.14 0 0.13 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.151 0.065 0.094</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cameraD_visual_2'>
+        <pose>0.025 0 0.32 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__front_camera_visual_3'>
+        <pose>0.025 0 0.32 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__front_laser_visual_4'>
+        <pose>0.125 0 0.25 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/laser/hokuyo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__front_sonar_vis_visual_5'>
+        <pose>0.109 0 0.209 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/back_sonar.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__top_visual_6'>
+        <pose>-0.045 0 0.234 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/top.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__velodyne_base_link_visual_7'>
+        <pose>0.125 0 0.25 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/velodyne_description/meshes/VLP16_base_1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__velodyne_base_link_visual_8'>
+        <pose>0.125 0 0.25 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/velodyne_description/meshes/VLP16_base_2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__velodyne_visual_9'>
+        <pose>0.125 0 0.25 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/velodyne_description/meshes/VLP16_scan.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <sensor name='camera2' type='depth'>
+        <update_rate>10</update_rate>
+        <camera name='head'>
+          <horizontal_fov>3.13</horizontal_fov>
+          <image>
+            <width>1024</width>
+            <height>256</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.02</near>
+            <far>5</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+        <plugin name='camera_plugin' filename='libgazebo_ros_openni_kinect.so'>
+          <baseline>0.2</baseline>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>0.0</updateRate>
+          <cameraName>camera_ir</cameraName>
+          <imageTopicName>/camera/depth/image_raw</imageTopicName>
+          <cameraInfoTopicName>/camera/depth/camera_info</cameraInfoTopicName>
+          <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+          <depthImageInfoTopicName>/camera/depth/camera_info</depthImageInfoTopicName>
+          <pointCloudTopicName>/camera/depth/points</pointCloudTopicName>
+          <frameName>camera_link</frameName>
+          <pointCloudCutoff>0.05</pointCloudCutoff>
+          <distortionK1>0</distortionK1>
+          <distortionK2>0</distortionK2>
+          <distortionK3>0</distortionK3>
+          <distortionT1>0</distortionT1>
+          <distortionT2>0</distortionT2>
+          <CxPrime>0</CxPrime>
+          <Cx>0</Cx>
+          <Cy>0</Cy>
+          <focalLength>0</focalLength>
+          <hackBaseline>0</hackBaseline>
+        </plugin>
+        <pose>0.025 0 0.32 0 -0 0</pose>
+      </sensor>
+      <sensor name='camera1' type='camera'>
+        <update_rate>30</update_rate>
+        <camera name='head'>
+          <horizontal_fov>1.92</horizontal_fov>
+          <image>
+            <width>512</width>
+            <height>256</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.02</near>
+            <far>300</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+        <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
+          <robotNamespace/>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>0.0</updateRate>
+          <cameraName>front_camera</cameraName>
+          <imageTopicName>image_raw</imageTopicName>
+          <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+          <frameName>front_camera</frameName>
+          <hackBaseline>0.07</hackBaseline>
+          <distortionK1>0.0</distortionK1>
+          <distortionK2>0.0</distortionK2>
+          <distortionK3>0.0</distortionK3>
+          <distortionT1>0.0</distortionT1>
+          <distortionT2>0.0</distortionT2>
+        </plugin>
+        <pose>0.025 0 0.32 0 -0 0</pose>
+      </sensor>
+      <sensor name='laser' type='ray'>
+        <ray>
+          <scan>
+            <horizontal>
+              <resolution>1</resolution>
+              <max_angle>1.5708</max_angle>
+              <min_angle>-1.5708</min_angle>
+              <samples>360</samples>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.08</min>
+            <max>10</max>
+            <resolution>0.01</resolution>
+          </range>
+        </ray>
+        <plugin name='laser' filename='libgazebo_ros_ray_sensor.so'>
+            <ros>
+                <remapping>~/out:=/front_laser/scan</remapping>
+            </ros>
+          <output_type>sensor_msgs/LaserScan</output_type>
+          <frame_name>front_laser</frame_name>
+        </plugin>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <visualize>1</visualize>
+        <pose>0.125 0 0.25 0 -0 0</pose>
+      </sensor>
+      <sensor name='velodyne-VLP16' type='ray'>
+        <visualize>0</visualize>
+        <update_rate>10</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1</resolution>
+              <min_angle>-1.57</min_angle>
+              <max_angle>1.57</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>16</samples>
+              <resolution>1</resolution>
+              <min_angle>-0.261799</min_angle>
+              <max_angle>0.261799</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>0.3</min>
+            <max>131</max>
+            <resolution>0.001</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0</mean>
+            <stddev>0</stddev>
+          </noise>
+        </ray>
+        <plugin name='gazebo_ros_laser_controller' filename='libgazebo_ros_velodyne_laser.so'>
+          <topicName>/velodyne_points</topicName>
+          <frameName>velodyne</frameName>
+          <min_range>0.1</min_range>
+          <max_range>130.0</max_range>
+          <gaussianNoise>0.008</gaussianNoise>
+        </plugin>
+        <pose>0.125 0 0.2877 0 -0 0</pose>
+      </sensor>
+    </link>
+    <joint name='chassis_swivel_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.185 0 0.055 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>swivel</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>100</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='swivel'>
+      <pose relative_to='chassis_swivel_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='swivel_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.01</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='swivel_fixed_joint_lump__base_visual_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/swivel.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='swivel_wheel_joint' type='revolute'>
+      <pose relative_to='swivel'>-0.026 0 -0.016 0 -0 0</pose>
+      <parent>swivel</parent>
+      <child>center_wheel</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>100</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='center_wheel'>
+      <pose relative_to='swivel_wheel_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.000318 0 -9.1e-05 0 -0 0</pose>
+        <mass>0.11</mass>
+        <inertia>
+          <ixx>0.0248235</ixx>
+          <ixy>-0.00142347</ixy>
+          <ixz>0.00100543</ixz>
+          <iyy>0.0304364</iyy>
+          <iyz>-8.54693e-06</iyz>
+          <izz>0.0235281</izz>
+        </inertia>
+      </inertial>
+      <collision name='center_wheel_collision'>
+        <pose>0 0 0 -1.5708 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.0375</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='center_wheel_fixed_joint_lump__center_hubcap_collision_1'>
+        <pose>-0.0035 0 -0.001 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.01</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='center_wheel_fixed_joint_lump__base_visual_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/center_wheel.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='center_wheel_fixed_joint_lump__base_visual_visual_1'>
+        <pose>-0.0035 0 -0.001 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/center_hubcap.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='left_hub_joint' type='revolute'>
+      <pose relative_to='base_link'>0 -0.15 0.09 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>left_hub</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='left_hub'>
+      <pose relative_to='left_hub_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.51</mass>
+        <inertia>
+          <ixx>0.0248235</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0304363</iyy>
+          <iyz>0</iyz>
+          <izz>0.023528</izz>
+        </inertia>
+      </inertial>
+      <collision name='left_hub_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.01</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='left_hub_fixed_joint_lump__left_wheel_collision_1'>
+        <pose>0 0 0 -1.5708 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='left_hub_fixed_joint_lump__base_visual_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/left_hubcap.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='left_hub_fixed_joint_lump__base_visual_visual_1'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/left_wheel.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='right_hub_joint' type='revolute'>
+      <pose relative_to='base_link'>0 0.15 0.09 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>right_hub</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='right_hub'>
+      <pose relative_to='right_hub_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.51</mass>
+        <inertia>
+          <ixx>0.0248235</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0304363</iyy>
+          <iyz>0</iyz>
+          <izz>0.023528</izz>
+        </inertia>
+      </inertial>
+      <collision name='right_hub_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.01</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='right_hub_fixed_joint_lump__right_wheel_collision_1'>
+        <pose>0 0 0 -1.5708 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='right_hub_fixed_joint_lump__base_visual_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/right_hubcap.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='right_hub_fixed_joint_lump__base_visual_visual_1'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://td_robot/meshes/p3dx/right_wheel.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <plugin name='differential_drive_controller' filename='libgazebo_ros_diff_drive.so'>
+
+      <robotNamespace/>
+      <publish_odom>1</publish_odom>
+      <publish_odom_tf>1</publish_odom_tf>
+      <always_on>1</always_on>
+
+      <left_joint>left_hub_joint</left_joint>
+      <right_joint>right_hub_joint</right_joint>
+
+      <wheel_separation>0.3</wheel_separation>
+      <wheel_diameter>0.18</wheel_diameter>
+
+      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>1.8</max_wheel_acceleration>
+      <command_topic>cmd_vel</command_topic>
+
+      <odometry_topic>odom</odometry_topic>
+      <odometry_frame>odom</odometry_frame>
+      <odometrySource>world</odometrySource>
+
+      <robot_base_frame>base_link</robot_base_frame>
+      <update_rate>50</update_rate>
+    </plugin>
+
+    <static>0</static>
+
+    <plugin name='joint_state_publisher' filename='libgazebo_ros_joint_state_publisher.so'>
+      <robotNamespace/>
+      <joint_name>chassis_swivel_joint</joint_name>
+      <joint_name>swivel_wheel_joint</joint_name>
+      <joint_name>left_hub_joint</joint_name>
+      <joint_name>right_hub_joint</joint_name>
+      <update_rate>50.0</update_rate>
+      <always_on>1</always_on>
+    </plugin>
+
+  </model>
+</sdf>
